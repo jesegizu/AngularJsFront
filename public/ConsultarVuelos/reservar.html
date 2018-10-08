@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-app="reserva">
+<head>
+	<title>Reservar</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    	<script src="../hello.js"></script>
+    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body background="https://media.kasperskydaily.com/wp-content/uploads/sites/87/2015/05/05201802/aircraft-routing-featured.jpg">
+	<div ng-controller="controller" class="form-group col-lg-6 col-md-6"><br>
+			<a class="btn btn-info"href="../index.html">Home</a><br><br>
+			<form onsubmit="this.reset()">
+			<font color="white">Identificacion:</font><input type="text" class="form-control"ng-model="idUsuario"><br>
+			<font color="white">Salida:</font><select ng-model = "salida" class="form-control" >
+				<option>Medellin</option>
+				<option>Bogota</option>
+				<option>Cali</option>
+				<option>Villavicencio</option>
+				<option>Rionegro</option>
+				<option>Cartagena</option>
+			</select><br>
+			 
+			<font color="white">Destino:</font><select ng-model = "destino" class="form-control" >
+				<option>Medellin</option>
+				<option>Bogota</option>
+				<option>Cali</option>
+				<option>Villavicencio</option>
+				<option>Rionegro</option>
+				<option>Cartagena</option>
+			</select><br>
+
+			<font color="white">Dia:</font><select ng-model = "dia" class="form-control" >
+				<option>Lunes</option>
+				<option>Martes</option>
+				<option>Miercoles</option>
+				<option>Jueves</option>
+				<option>Viernes</option>
+				<option>Sabado</option>
+				<option>Domingo</option>
+			</select><br>
+
+			<font color="white">Hora:</font><select ng-model = "hora" class="form-control" >
+				<option>00</option>
+				<option>01</option>
+				<option>02</option>
+				<option>03</option>
+				<option>04</option>
+				<option>05</option>
+				<option>06</option>
+				<option>07</option>
+				<option>08</option>
+				<option>08</option>
+				<option>10</option>
+				<option>11</option>
+				<option>12</option>
+				<option>13</option>
+				<option>14</option>
+				<option>15</option>
+				<option>16</option>
+				<option>17</option>
+				<option>18</option>
+				<option>19</option>
+				<option>20</option>
+				<option>21</option>
+				<option>22</option>
+				<option>23</option>
+				<option>24</option>
+			</select><br>
+			</form>
+			<button type="rest" class="btn btn-info"ng-click ="guardarVuelo()">Reservar</button>
+
+			<div ng-show="reservado" class="well">
+				<h3>Reservado</h3>
+			</div>
+		</div>
+</body>
+</html>
